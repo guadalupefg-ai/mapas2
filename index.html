@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Urbano Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mapa Urbano Interactivo</h1>
+            <p class="subtitle">Explora la ciudad y crea rutas con nombres de calles personalizados</p>
+        </header>
+        
+        <div class="content">
+            <div class="map-container">
+                <div id="canvas-container"></div>
+            </div>
+            
+            <div class="info-panel">
+                <h2 class="panel-title">Información del Recorrido</h2>
+                
+                <div class="instructions">
+                    <p>Mueve el cursor sobre las calles para crear un recorrido. Las calles se nombrarán automáticamente.</p>
+                </div>
+                
+                <div class="controls">
+                    <button id="clear-btn">Limpiar Recorrido</button>
+                    <button id="new-map-btn">Generar Nuevo Mapa</button>
+                </div>
+                
+                <div id="route-info">
+                    <div class="route-item">Aún no se ha creado un recorrido.</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Proyecto de Mapa Interactivo | Más allá: sin meta</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

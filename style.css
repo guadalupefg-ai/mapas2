@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(128, 0, 128, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.3);
+    border: 1px solid #8B008B;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #8B008B, #FF00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(128, 0, 128, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #D8BFD8;
+    margin-bottom: 15px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.map-container {
+    flex: 1;
+    min-width: 700px;
+    background: rgba(128, 0, 128, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.2);
+    border: 1px solid #4B0082;
+}
+
+.info-panel {
+    flex: 0 0 350px;
+    background: rgba(128, 0, 128, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.2);
+    border: 1px solid #4B0082;
+}
+
+.panel-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #8B008B;
+    border-bottom: 2px solid #8B008B;
+    padding-bottom: 8px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #8B008B, #4B0082);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(128, 0, 128, 0.3);
+    flex: 1;
+    min-width: 150px;
+    border: 1px solid #8B008B;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(128, 0, 128, 0.4);
+    background: linear-gradient(135deg, #4B0082, #8B008B);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#route-info {
+    background: rgba(128, 0, 128, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #4B0082;
+}
+
+.instructions {
+    background: rgba(128, 0, 128, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #8B008B;
+    color: #D8BFD8;
+}
+
+.route-item {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(128, 0, 128, 0.3);
+}
+
+.street-name {
+    color: #FF00FF;
+    font-weight: bold;
+}
+
+.coordinates {
+    color: #D8BFD8;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.current-street {
+    background: rgba(128, 0, 128, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border-left: 3px solid #FF00FF;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #8B008B;
+    font-size: 0.9rem;
+}
+
+canvas {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(128, 0, 128, 0.3);
+}
+
+@media (max-width: 1100px) {
+    .content {
+        flex-direction: column;
+    }
+    .map-container, .info-panel {
+        min-width: 100%;
+    }
+}
